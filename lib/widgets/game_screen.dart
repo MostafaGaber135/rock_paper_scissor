@@ -53,7 +53,7 @@ class _GameScreenState extends State<GameScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 34, horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
