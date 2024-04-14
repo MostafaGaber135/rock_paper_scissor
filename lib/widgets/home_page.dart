@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                         tag: 'Scissor',
                         child: gameButton(
                           () {
-                            log('Tou choose Scissor!');
+                            log('Tou choose git commit -m "first commit"!');
                             Navigator.push(
                               context,
                               MaterialPageRoute(
