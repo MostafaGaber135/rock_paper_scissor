@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rock_paper_scissors_game/main.dart';
 import 'package:rock_paper_scissors_game/utils/game.dart';
 import 'package:rock_paper_scissors_game/widgets/custom_button.dart';
 import 'package:rock_paper_scissors_game/widgets/home_page.dart';
@@ -53,13 +54,13 @@ class _GameScreenState extends State<GameScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.symmetric(vertical: 50),
+              margin: const EdgeInsets.symmetric(vertical: 40),
               padding: const EdgeInsets.all(25),
               decoration: BoxDecoration(
                 border: Border.all(
@@ -89,6 +90,9 @@ class _GameScreenState extends State<GameScreen> {
                   ),
                 ],
               ),
+            ),
+            const SizedBox(
+              height: 15,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height / 2,
@@ -167,10 +171,16 @@ class _GameScreenState extends State<GameScreen> {
                   ),
                   child: Text(
                     'rules'.toUpperCase(),
-                    style: const TextStyle(color: Colors.white, fontSize: 24),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: getResponsiveFontSize(context, fontSize: 20),
+                    ),
                   ),
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
           ],
         ),
