@@ -122,49 +122,53 @@ class _GameScreenState extends State<GameScreen> {
             const SizedBox(
               height: 15,
             ),
-            SizedBox(
-              width: double.infinity,
-              child: RawMaterialButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const HomePage(),
+            Expanded(
+              child: SizedBox(
+                width: double.infinity,
+                child: RawMaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HomePage(),
+                      ),
+                    );
+                  },
+                  padding: const EdgeInsets.all(16),
+                  shape: const StadiumBorder(
+                    side: BorderSide(
+                      color: Colors.white,
+                      width: 5,
                     ),
-                  );
-                },
-                padding: const EdgeInsets.all(16),
-                shape: const StadiumBorder(
-                  side: BorderSide(
-                    color: Colors.white,
-                    width: 5,
                   ),
-                ),
-                child: const Text(
-                  'Play Again',
-                  style: TextStyle(color: Colors.white, fontSize: 24),
+                  child: const Text(
+                    'Play Again',
+                    style: TextStyle(color: Colors.white, fontSize: 24),
+                  ),
                 ),
               ),
             ),
             const SizedBox(
               height: 20,
             ),
-            SizedBox(
-              width: double.infinity,
-              child: RawMaterialButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, RulesScreen.id);
-                },
-                padding: const EdgeInsets.all(16),
-                shape: const StadiumBorder(
-                  side: BorderSide(
-                    color: Colors.white,
-                    width: 5,
+            Expanded(
+              child: SizedBox(
+                width: double.infinity,
+                child: RawMaterialButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, RulesScreen.id);
+                  },
+                  padding: const EdgeInsets.all(16),
+                  shape: const StadiumBorder(
+                    side: BorderSide(
+                      color: Colors.white,
+                      width: 5,
+                    ),
                   ),
-                ),
-                child: Text(
-                  'rules'.toUpperCase(),
-                  style: const TextStyle(color: Colors.white, fontSize: 24),
+                  child: Text(
+                    'rules'.toUpperCase(),
+                    style: const TextStyle(color: Colors.white, fontSize: 24),
+                  ),
                 ),
               ),
             ),
